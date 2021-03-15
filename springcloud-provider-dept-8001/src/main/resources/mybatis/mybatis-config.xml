@@ -8,4 +8,8 @@
         <!--开启二级缓存-->
         <setting name="cacheEnabled" value="true"/>
     </settings>
+    
+    <typeAliases>
+        <package name="com.curtain.springcloud.pojo"/>
+    </typeAliases>
 </configuration>

@@ -3,17 +3,19 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.curtain.springcloud.dao.DaptDao">
+<mapper namespace="com.curtain.springcloud.dao.DeptDao">
     
-    <insert id="addDept" parameterType="com.curtain.springcloud.pojo.Dept">
+    <insert id="addDept" parameterType="Dept">
         insert into dept(dname, db_source)
-        values(#{dname}, DATASOURCE())
+        values(#{dname}, DATABASE())
     </insert>
     
     <select id="queryById" resultType="Dept" parameterType="Long">
         select * from dept
         where deptno = #{deptno}
     </select>
-    
-    <select id="queryAll" resultType=""
+
+    <select id="queryAll" resultType="Dept">
+        select * from dept
+    </select>
 </mapper>

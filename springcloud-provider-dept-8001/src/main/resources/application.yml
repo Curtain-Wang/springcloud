@@ -3,16 +3,16 @@ server:
 #mybatis配置
 mybatis:
   type-aliases-package: com.curtain.springcloud.pojo
-  config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
-  
+  configuration:
+    map-underscore-to-camel-case: true
 #Spring配置
 spring:
   application:
     name: springcloud-provider-dept
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource #数据源
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://47.99.73.234:3306/DB01?userUnicode=true&characterEncoding=utf-8
     username: root
     password: Wqt19971130@

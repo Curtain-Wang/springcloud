@@ -8,7 +8,7 @@ import java.util.List;
 
 @Mapper
 @Repository
-public interface DaptDao {
+public interface DeptDao {
     
     boolean addDept(Dept dept);
     
