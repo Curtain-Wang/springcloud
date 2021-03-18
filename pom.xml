@@ -11,6 +11,7 @@
         <module>springcloud-api</module>
         <module>springcloud-provider-dept-8001</module>
         <module>springcloud-consumer-dept-80</module>
+        <module>springcloud-eureka-7001</module>
     </modules>
 
     <!--打包方式 pom-->
@@ -28,6 +29,7 @@
         <mysql.version>5.1.47</mysql.version>
         <spring-boot.version>2.1.4.RELEASE</spring-boot.version>
         <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
+        <eureka.version>1.4.6.RELEASE</eureka.version>
     </properties>
     
     <dependencyManagement>
@@ -87,6 +89,11 @@
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-core</artifactId>
                 <version>${logback-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-eureka-server</artifactId>
+                <version>${eureka.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
